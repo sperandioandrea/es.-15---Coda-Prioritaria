@@ -36,7 +36,16 @@ namespace es._15___Coda_Prioritaria
             return lista.Contains(elemento);
         }
 
-        
+        // Lettura del primo elemento (Peek)
+        public object Peek()
+        {
+            if (lista.Count == 0)
+            {
+                throw new InvalidOperationException("La coda è vuota");
+            }
+            return lista[0];
+        }
+
 
     }
 }
