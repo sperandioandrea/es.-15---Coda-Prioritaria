@@ -36,7 +36,7 @@ namespace es._15___Coda_Prioritaria
             return lista.Contains(elemento);
         }
 
-        // Lettura del primo elemento (Peek)
+        //Lettura del primo elemento
         public object Peek()
         {
             if (lista.Count == 0)
@@ -46,6 +46,29 @@ namespace es._15___Coda_Prioritaria
             return lista[0];
         }
 
+        //Estrazione del primo elemento
+        public object EstraiPrimo()
+        {
+            if (lista.Count == 0)
+            {
+                throw new InvalidOperationException("La coda è vuota");
+            }
+            object primoElemento = lista[0];
+            lista.RemoveAt(0);
+            return primoElemento;
+        }
+
+        //Estrazione dell'ultimo elemento
+        public object EstraiUltimo()
+        {
+            if (lista.Count == 0)
+            {
+                throw new InvalidOperationException("La coda è vuota");
+            }
+            object ultimoElemento = lista[lista.Count - 1];
+            lista.RemoveAt(lista.Count - 1);
+            return ultimoElemento;
+        }
 
     }
 }
